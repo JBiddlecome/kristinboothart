@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kristin Booth | Artist Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">KB</span>
+      <span class="brand-name">Kristin Booth</span>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#selected-work">Selected Work</a>
+      <a href="#bio">Bio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-media">
+        <img src="Images/Title%20Image.jpg" alt="Vivid abstract artwork by Kristin Booth" loading="lazy">
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Artist Portfolio &amp; Shop</p>
+        <h1>Color-forward stories painted by Kristin Booth.</h1>
+        <p class="lede">Immerse yourself in expressive marks and layered textures that celebrate light, movement, and emotion.</p>
+        <div class="hero-actions">
+          <a class="button" href="#selected-work">Explore the work</a>
+          <a class="button ghost" href="#shop">Try it on a wall or tee</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="selected-work" class="section">
+      <div class="section-header">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Collected energy in canvas form.</h2>
+        <p class="section-description">A snapshot of recent paintings and mixed-media pieces from Kristin's studio.</p>
+      </div>
+      <div class="work-grid" id="work-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="shop" class="section experience">
+      <div class="section-header">
+        <p class="eyebrow">Shop</p>
+        <h2>Preview each piece in your world.</h2>
+        <p class="section-description">Select an artwork to see how it looks framed on a wall, printed on a tee, or wrapped around a mug.</p>
+      </div>
+      <div class="experience-grid">
+        <div class="experience-controls">
+          <label class="control">
+            <span>Choose an artwork</span>
+            <select id="art-selection" aria-label="Choose an artwork to preview"></select>
+          </label>
+          <div class="selection-meta">
+            <h3 id="selection-title">&nbsp;</h3>
+            <p id="selection-details"></p>
+            <div class="chips" id="selection-tags"></div>
+          </div>
+          <p class="helper">Tip: click any piece in the Selected Work grid to preview it here.</p>
+        </div>
+        <div class="preview-grid">
+          <div class="preview-card">
+            <div class="preview-surface wall">
+              <div class="frame">
+                <img data-preview-image src="" alt="Artwork on a gallery wall" loading="lazy">
+              </div>
+            </div>
+            <div class="preview-label">Framed on a wall</div>
+          </div>
+          <div class="preview-card">
+            <div class="preview-surface tee">
+              <div class="fabric-fold"></div>
+              <img data-preview-image src="" alt="Artwork printed on a shirt" loading="lazy">
+            </div>
+            <div class="preview-label">Printed on a tee</div>
+          </div>
+          <div class="preview-card">
+            <div class="preview-surface mug">
+              <div class="mug-handle"></div>
+              <img data-preview-image src="" alt="Artwork wrapped on a ceramic mug" loading="lazy">
+            </div>
+            <div class="preview-label">Wrapped on a mug</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bio" class="section bio">
+      <div class="bio-media">
+        <img src="Images/Hero%20Image%202.jpg" alt="Portrait of artist Kristin Booth" loading="lazy">
+      </div>
+      <div class="bio-content">
+        <p class="eyebrow">About Kristin</p>
+        <h2>Painter, colorist, storyteller.</h2>
+        <p>Kristin Booth blends bold chroma with subtle texture, building layers that invite viewers to pause, breathe, and feel. Each piece is influenced by coastal light, memory fragments, and the way sound translates into color on canvas.</p>
+        <p>Her work lives in private collections and intimate public spaces. Between commissions, she experiments with textile translations so collectors can live with the work in new ways.</p>
+        <a class="button" href="#contact">Connect with Kristin</a>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-header">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's collaborate</h2>
+        <p class="section-description">Commission inquiries, gallery requests, or a hello—reach out and let's start something vivid.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Email</h3>
+          <a href="mailto:hello@kristinbooth.com">hello@kristinbooth.com</a>
+        </div>
+        <div class="contact-card">
+          <h3>Social</h3>
+          <p>Instagram • @kristinboothart</p>
+          <p>Studio visits by appointment</p>
+        </div>
+        <div class="contact-card">
+          <h3>Newsletter</h3>
+          <p>Be first to know about new drops, shows, and limited apparel.</p>
+          <button class="button ghost" type="button">Join the list</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="brand">KB</div>
+    <p>Kristin Booth © <span id="year"></span>. Crafted with care.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

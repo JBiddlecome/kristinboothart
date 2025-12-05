@@ -1,1 +1,12 @@
+# Kristin Booth Art
 
+Static, single-page gallery and shop preview for artist Kristin Booth. Open `index.html` in a browser to explore.
+
+## Structure
+- `index.html` – markup for hero, selected works, previews, bio, and contact sections.
+- `styles.css` – dark, artsy styling with responsive layouts and product mockups.
+- `script.js` – populates the gallery, handles artwork selection, and updates live previews for wall, tee, and mug surfaces.
+- `Images/` – source artwork and portrait assets (including "Title Image.jpg" and "Hero Image 2.jpg").
+
+## Previewing
+No build step is required. Serve the folder locally (e.g., `python -m http.server`) or open `index.html` directly to interact with the selectors and previews.
