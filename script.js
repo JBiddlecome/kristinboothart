@@ -52,6 +52,8 @@ const selectionTags = document.getElementById('selection-tags');
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.site-nav');
 const year = document.getElementById('year');
+const header = document.querySelector('.site-header');
+const heroSection = document.querySelector('.hero');
 
 const createCard = (piece, index) => {
   const card = document.createElement('article');
@@ -123,12 +125,23 @@ function initNavToggle() {
   );
 }
 
+function handleHeaderTheme() {
+  if (!header || !heroSection) return;
+  const heroHeight = heroSection.offsetHeight || 0;
+  const switchPoint = Math.max(heroHeight - 160, 160);
+  const isScrolled = window.scrollY > switchPoint;
+  header.classList.toggle('scrolled', isScrolled);
+}
+
 function init() {
   populateGallery();
   populateSelector();
   setSelection(0);
   selection.addEventListener('change', (e) => setSelection(Number(e.target.value)));
   initNavToggle();
+  handleHeaderTheme();
+  window.addEventListener('scroll', handleHeaderTheme);
+  window.addEventListener('resize', handleHeaderTheme);
   if (year) year.textContent = new Date().getFullYear();
 }
 
